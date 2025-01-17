@@ -5,15 +5,6 @@ import { Box } from '@mui/material'
 
 const footerData=[
     {
-        title:'Help',
-        links:[
-            {link:'/sample',text:'Privacy Policy'},
-            {link:'/sample',text:'Shipping & Delivery'},
-            {link:'/sample',text:'Refund Policy'},
-            {link:'/sample',text:'Track your Order'},
-        ]
-    },
-    {
         title:'Store',
         links:[
             {link:'/sample',text:'T-Shirts'},
@@ -21,7 +12,15 @@ const footerData=[
             {link:'/sample',text:'Dress'},
             {link:'/sample',text:'New Item'},
         ]
-    }, {
+    },{
+        title:'Help',
+        links:[
+            {link:'/sample',text:'Privacy Policy'},
+            {link:'/sample',text:'Shipping & Delivery'},
+            {link:'/sample',text:'Refund Policy'},
+            {link:'/sample',text:'Track your Order'},
+        ]
+    },{
         title:'Support',
         links:[
             {link:'/sample',text:'Feedback'},
@@ -29,7 +28,8 @@ const footerData=[
             {link:'/sample',text:'Download App'},
             {link:'/sample',text:'Terms and Condition'},
         ]
-    }
+    },
+    
 ]
 
 export default function Footer() {
