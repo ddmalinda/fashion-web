@@ -5,7 +5,7 @@ import LinkListSection from './informativeFooter/LinkListSection'
 
 export default function InformativeFooter({footerData}) {
   return (
-      <Box sx={{maxWidth:'1320px',m:'auto'}}>
+      <Box sx={{maxWidth:'1320px',m:'auto', paddingBottom:'50px'}}>
      
         <Grid2 container  justifyContent="space-around" >
           <Grid2 size={{ xs:12 , md:3 }}>

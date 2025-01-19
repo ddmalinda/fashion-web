@@ -35,7 +35,7 @@ const footerData=[
 export default function Footer() {
   return (
    <Box>
-    <InformativeFooter footerData={footerData}/>
+    <InformativeFooter footerData={footerData} />
     <BottumLineFooter/> 
     </Box>
         
