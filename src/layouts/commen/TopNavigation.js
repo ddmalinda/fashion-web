@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import SingaleNavigationItem from '../../components/navigationbar/SingaleNavigationItem';
 import BrandTypography from '../../components/commen/BrandTypography';
+import { Box } from '@mui/material';
 
 const navLinks = [
   { title: 'All Items'},
@@ -23,7 +24,11 @@ export default function TopNavigation() {
           <Nav className="me-auto" >
             {navLinks.map((val,key)=>{
                 return (
-                   <SingaleNavigationItem val={val} key={key} />
+                  <Box key={key}>
+                    <SingaleNavigationItem val={val} />
+                  </Box>
+                  
+                   
                 );
             })}
           

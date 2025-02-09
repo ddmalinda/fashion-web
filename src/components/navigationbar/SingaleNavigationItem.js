@@ -3,9 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import { Box } from '@mui/system';
 
 
-export default function SingaleNavigationItem({val,key}) {
+export default function SingaleNavigationItem({val}) {
   return (
-    <Box  key={key} component={Nav.Link} 
+    <Box  component={Nav.Link} 
                     sx={{  
                         color:'black',
                         fontFamily:'Ubuntu',    

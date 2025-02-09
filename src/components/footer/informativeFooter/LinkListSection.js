@@ -11,7 +11,7 @@ export default function LinkListSection({title,links}) {
     <Box>
     {links.map((val,key)=>{
         return (
-            <Grid2 href={val.link} component={'a'}
+            <Grid2 key={key} href={val.link} component={'a'}
                 sx={{
                     display:'block',
                     fontSize:'15px',
