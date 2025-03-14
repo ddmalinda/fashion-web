@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function ContactSection({ data }) {
   return (
-    <Box sx={{ textAlign: "center" }}>
+    <Box sx={{ textAlign: "center", marginTop:'50px' }}>
       <img style={{ width: "150px", height: "150px" }} alt="newsletter icon" src="https://static.vecteezy.com/system/resources/previews/020/700/549/non_2x/e-newsletter-icon-design-free-vector.jpg" />
       <Typography sx={{
         fontFamily: "Ubuntu",

@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import BdTitle from './BdTitle'
-import NoBdTitle from './NoBdTitle'
-import ShopNowButton from '../commen/ShopNowButton'
+import BdTitle from '../commen/titles/BdTitle'
+import NoBdTitle from '../commen/titles/NoBdTitle'
+import ShopNowButton from '../commen/buttons/ShopNowButton'
 
 export default function SingleSliderItem({ image }) {
     return (

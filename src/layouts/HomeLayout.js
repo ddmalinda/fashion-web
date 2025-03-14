@@ -11,7 +11,7 @@ var items = [
     image: 'https://images.pexels.com/photos/3761157/pexels-photo-3761157.jpeg'
   },
   {
-    image: 'https://images.pexels.com/photos/794064/pexels-photo-794064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: 'https://images.pexels.com/photos/833052/pexels-photo-833052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg'
@@ -52,7 +52,6 @@ export default function HomeLayout() {
       new arrivals selection<br />
       visite store button<br />
       comming soon selection<br />
-
 
       <Box sx={{ maxWidth: 'xl', mx: 'auto' }}>
         <SaleSection />

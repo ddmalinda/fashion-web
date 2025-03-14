@@ -4,7 +4,7 @@ import React from 'react'
 export default function SocialIcons({title,image,link}) {
   return (
   <Box component={'a'} href={link}>
-    <img src={image} alt={title} title={title} style={{ width: "20px", height: "20px" }}/>
+    <img src={image} alt={title} title={title} style={{ width: "40px", height: "40px" }}/>
   </Box>
   )
 }
