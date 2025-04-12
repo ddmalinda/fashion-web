@@ -5,6 +5,7 @@ import Footer from './commen/Footer'
 import CustomerSlider from './homeLayout/CustomerSlider'
 import ContactSection from './homeLayout/ContactSection'
 import SaleSection from './homeLayout/SaleSection'
+import NewArrivalSection from './homeLayout/newArrivals/NewArrivalSection'
 
 var items = [
   {
@@ -48,8 +49,10 @@ export default function HomeLayout() {
       <TopNavigation />
       <Box sx={{ maxWidth: 'xl', mx: 'auto' }}>
         <CustomerSlider items={items} />
+        <Box sx={{mt:'60px'}}>
+          <NewArrivalSection/>
+        </Box>
       </Box>
-      new arrivals selection<br />
       visite store button<br />
       comming soon selection<br />
 
