@@ -43,9 +43,11 @@ var socailData = [
   }
 ]
 
+
 export default function HomeLayout() {
   return (
     <Box>
+      
       <TopNavigation />
       <Box sx={{ maxWidth: 'xl', mx: 'auto' }}>
         <CustomerSlider items={items} />
@@ -61,8 +63,6 @@ export default function HomeLayout() {
         <ContactSection data={socailData} />
       </Box>
       <Footer />
-
-
     </Box>
   )
 }

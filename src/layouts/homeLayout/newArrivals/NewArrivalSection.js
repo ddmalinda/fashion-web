@@ -1,15 +1,14 @@
-import { Box } from '@mui/material'
-import React from 'react'
-import SingleProduct from '../../../components/commen/product/SingleProduct'
 import SectionTitle from '../../../components/commen/titles/SectionTitle'
+import ProductGrid from './ProductGrid'
+import React from 'react'
 
 
 
 export default function NewArrivalSection() {
   return (
-   <Box>
+   <div>
     <SectionTitle title={'new Arrivals'}/>
-    <SingleProduct/>
-   </Box>
+    <ProductGrid/>
+   </div>
   )
 }
