@@ -1,7 +1,15 @@
+import { Grid2 } from '@mui/material'
 import React from 'react'
 
-export default function ProductName() {
+export default function SingleProductName({product_name}) {
   return (
-    <div>ProductName</div>
+    <Grid2 sx={{
+      fontSize:{xs:'12px',md:'17px'},
+      color:'GrayText',
+      fontFamily:'Ubuntu',
+      fontWeight:'500'
+      }}>
+        {product_name}
+    </Grid2>
   )
 }

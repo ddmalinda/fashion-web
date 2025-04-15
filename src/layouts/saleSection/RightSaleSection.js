@@ -17,7 +17,7 @@ export default function RightSaleSection() {
          
     }}
     >
-        <Box sx={{pl:{sm:'60px'},mt:{sx:'20px',sm:'40px',md:'80px'},}}>
+        <Box sx={{pl:{xs:'90px',sm:'60px'},mt:{xs:'60px',sm:'40px',md:'80px'},}}>
             <BdTitle title={'payday'} bdcolor={'white'} />
             <NoBdTitle title={'sale now'}/>
             <Typography sx={{mt:'10px',

@@ -1,7 +1,8 @@
+import { Rating } from '@mui/material'
 import React from 'react'
 
-export default function ProductRating() {
+export default function ProductRating({rating}) {
   return (
-    <div>ProductRating</div>
+    <Rating name="half-rating-read" defaultValue={rating} precision={0.1} readOnly />
   )
 }
