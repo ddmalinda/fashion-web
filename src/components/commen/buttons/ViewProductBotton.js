@@ -1,6 +1,5 @@
 import { Button } from '@mui/material'
 import React from 'react'
-
 export default function ViewProductBotton({text}) {
   return (
     <Button sx={{
@@ -10,6 +9,8 @@ export default function ViewProductBotton({text}) {
       bgcolor:'#FBD103',
       borderRadius:'10px',
       fontSize:'14px',
+      fontWeight:'500',
+      p:'5px',
       '&:hover':{
         bgcolor:'black',
         color:'white',

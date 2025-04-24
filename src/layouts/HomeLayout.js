@@ -5,7 +5,10 @@ import Footer from './commen/Footer'
 import CustomerSlider from './homeLayout/CustomerSlider'
 import ContactSection from './homeLayout/ContactSection'
 import SaleSection from './homeLayout/SaleSection'
-import NewArrivalSection from './homeLayout/newArrivals/NewArrivalSection'
+import NewArrivalSection from './homeLayout/NewArrivalSection'
+import ServiceSection from './homeLayout/ServiceSection'
+import ViewStoreButoon from '../components/commen/buttons/ViewStoreButoon'
+
 
 var items = [
   {
@@ -54,14 +57,17 @@ export default function HomeLayout() {
         <Box sx={{mt:'60px'}}>
           <NewArrivalSection/>
         </Box>
-      </Box>
-      visite store button<br />
-      comming soon selection<br />
+      <ServiceSection/>
 
-      <Box sx={{ maxWidth: 'xl', mx: 'auto' }}>
+      <Box sx={{m:'20px 0px 20px 0px'}}>
+      <ViewStoreButoon />
+      </Box>
         <SaleSection />
         <ContactSection data={socailData} />
+      comming soon selection<br />
       </Box>
+     
+
       <Footer />
     </Box>
   )

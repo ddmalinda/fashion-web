@@ -7,7 +7,7 @@ export default function ProductPrice({price}) {
     <Grid2 sx={{
       fontFamily:'Ubuntu',
       fontWeight:'500',
-      fontSize:{xs:'10px',md:'20px'},
+      fontSize:{xs:'12px',md:'20px'},
       color:'#FF7D1E'
       }}>
       {priceValueFormat(price)}

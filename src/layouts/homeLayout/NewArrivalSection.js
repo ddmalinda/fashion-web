@@ -1,5 +1,5 @@
-import SectionTitle from '../../../components/commen/titles/SectionTitle'
-import ProductGrid from './ProductGrid'
+import SectionTitle from '../../components/commen/titles/SectionTitle'
+import ProductGrid from './newArrivals/ProductGrid'
 import React from 'react'
 
 

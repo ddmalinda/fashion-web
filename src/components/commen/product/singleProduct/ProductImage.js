@@ -13,7 +13,7 @@ export default function ProductImage({ images }) {
       onMouseOut={() => setImageSrc(images[0])}
       sx={{
         width: "100%",
-        height: '350px',
+        height: {xs:'250px',md:'350px'},
         objectFit: 'cover',
         borderRadius: '10px'
       }}>
