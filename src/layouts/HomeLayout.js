@@ -8,6 +8,7 @@ import SaleSection from './homeLayout/SaleSection'
 import NewArrivalSection from './homeLayout/NewArrivalSection'
 import ServiceSection from './homeLayout/ServiceSection'
 import ViewStoreButoon from '../components/commen/buttons/ViewStoreButoon'
+import CoomigSoonSection from './homeLayout/CoomigSoonSection'
 
 
 var items = [
@@ -58,13 +59,12 @@ export default function HomeLayout() {
           <NewArrivalSection/>
         </Box>
       <ServiceSection/>
-
       <Box sx={{m:'20px 0px 20px 0px'}}>
       <ViewStoreButoon />
       </Box>
+      <CoomigSoonSection/>
         <SaleSection />
         <ContactSection data={socailData} />
-      comming soon selection<br />
       </Box>
      
 
