@@ -1,0 +1,18 @@
+import { Box } from '@mui/material'
+import React from 'react'
+import TopNavigation from '../../layouts/commen/TopNavigation'
+import Footer from '../../layouts/commen/Footer'
+
+export default function CommoneWrapLayout({children}) {
+  return (<Box>
+
+    <Box sx={{position:'sticky',top:0,zIndex:5000}}>
+        <TopNavigation/>
+  </Box>
+    <Box sx={{maxWidth:'xl', mx:'auto'}}>
+        {children}
+    </Box>
+    <Footer/>
+    </Box>
+  )
+}

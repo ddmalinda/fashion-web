@@ -1,7 +1,5 @@
 import { Box } from '@mui/system'
 import React from 'react'
-import TopNavigation from './commen/TopNavigation'
-import Footer from './commen/Footer'
 import CustomerSlider from './homeLayout/CustomerSlider'
 import ContactSection from './homeLayout/ContactSection'
 import SaleSection from './homeLayout/SaleSection'
@@ -9,6 +7,7 @@ import NewArrivalSection from './homeLayout/NewArrivalSection'
 import ServiceSection from './homeLayout/ServiceSection'
 import ViewStoreButoon from '../components/commen/buttons/ViewStoreButoon'
 import CoomigSoonSection from './homeLayout/CoomigSoonSection'
+import CommoneWrapLayout from '../components/commen/CommoneWrapLayout'
 
 
 var items = [
@@ -50,9 +49,10 @@ var socailData = [
 
 export default function HomeLayout() {
   return (
-    <Box>
-      
-      <TopNavigation />
+
+      <CommoneWrapLayout>
+
+    
       <Box sx={{ maxWidth: 'xl', mx: 'auto' }}>
         <CustomerSlider items={items} />
         <Box sx={{mt:'60px'}}>
@@ -68,7 +68,8 @@ export default function HomeLayout() {
       </Box>
      
 
-      <Footer />
-    </Box>
+   
+      </CommoneWrapLayout>
+
   )
 }
