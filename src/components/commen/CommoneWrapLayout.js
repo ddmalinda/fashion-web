@@ -9,7 +9,7 @@ export default function CommoneWrapLayout({children}) {
     <Box sx={{position:'sticky',top:0,zIndex:5000}}>
         <TopNavigation/>
   </Box>
-    <Box sx={{maxWidth:'xl', mx:'auto'}}>
+    <Box sx={{maxWidth:'xl', mx:'auto', minHeight:'60vh', p:'0 6%', mt:'20px'}}>
         {children}
     </Box>
     <Footer/>
