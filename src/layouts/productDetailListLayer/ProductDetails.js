@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { priceValueFormat } from '../../util/Functions';
 import { Box, Chip, Grid2, Rating, Typography } from '@mui/material'
 import ProductSizezSelecter from './productDetails/ProductSizezSelecter';
 import AddToCardButton from '../../components/commen/buttons/AddToCardButton';
 
-export default function ProductDetails({product}) {
+export default function ProductDetails({product,selectedSize,isError,qty,isLoding,hadleAddToCard,handleQtyChange,handleSelectedSize}) {
     const{
         //id,
         product_name,
@@ -12,40 +12,12 @@ export default function ProductDetails({product}) {
         size,
         available_quantity,
         rating,
-        // imageBaseUrl,
-        // images,
+       // imageBaseUrl,
+       // images,
         description_one,
         description_two
     }=product;
-
-    //Hooks
-    const [selectedSize, setSelectedSize]=useState();
-    const [isError,SetIsError] =useState(false);
-    const [qty, setQty] = useState(1);
-    const [isLoding,setIsLoding]=useState(false)
-
-    const handleQtyChange =(newQty)=>{
-        setQty(newQty)
-    } 
-
-    const handleSelectedSize =(clickSize)=>{
-        setSelectedSize(clickSize);
-    }
-
-    const hadleAddToCard =()=>{
-        if(selectedSize){
-            setIsLoding(true)
-            SetIsError(false)
-            
-            setTimeout(()=>{
-                setIsLoding(false)
-                setQty(1)
-                setSelectedSize()
-            },1000)
-        }else{
-            SetIsError(true) 
-        }
-    }
+   
     return (
     <div>
         <Grid2 container>

@@ -1,10 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
-export default function SingleProductSize({ size}) {
+export default function SingaleSizeSelecterBox({ size}) {
   return (
     <Box
-   
       sx={{
         border: '1px solid',
         borderColor:'black',
@@ -13,13 +12,13 @@ export default function SingleProductSize({ size}) {
         height: '40px',
         justifyItems: 'center',
         alignContent: 'center',
-        bgcolor:'black',
+        bgcolor: 'black'
       }}>
       <Typography sx={{
         fontFamily: 'Ubuntu',
         fontWeight: 500,
         textTransform: 'uppercase',
-        color: '#FFFFFF',
+        color:'#FFFFFF' 
       }}>
         {size}
       </Typography>
