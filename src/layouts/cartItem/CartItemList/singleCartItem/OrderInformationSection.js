@@ -1,8 +1,8 @@
 import { TableBody, TableCell, TableRow, Typography } from '@mui/material'
 import React from 'react'
 import { Table } from 'react-bootstrap'
-import SingleProductSize from '../../../productDetailListLayer/productDetails/SingleProductSize'
 import { priceValueFormat } from '../../../../util/Functions'
+import SingaleSizeSelecterBox from './SingaleSizeSelecterBox'
 
 export default function OrderInformationSection({ qty, price, size='M' }) {
     return (
@@ -13,7 +13,7 @@ export default function OrderInformationSection({ qty, price, size='M' }) {
                 <TableRow >
 
                     <TableCell sx={{ width: '1%', borderRight: '2px solid black !important', }}>
-                        <SingleProductSize size={size} />
+                        <SingaleSizeSelecterBox size={size} />
                     </TableCell>
                     <TableCell sx={{ width: '1%', borderRight: '2px solid black !important' }}>
                         <Typography sx={{ fontFamily: 'ubuntu', fontSize: { xs: '20px', md: '32px' }, color: '#000000',fontWeight:'bold' }}>

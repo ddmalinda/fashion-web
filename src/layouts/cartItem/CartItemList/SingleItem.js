@@ -1,33 +1,57 @@
-import { Grid2, IconButton } from '@mui/material'
+import { Grid2, IconButton, Box } from '@mui/material'
 import React from 'react'
-import ProductInforCart from './singleCartItem/ProductInforCart'
+import ProductInforSection from './singleCartItem/ProductInforSection'
 import CancelIcon from '@mui/icons-material/Cancel';
+import OrderInformationSection from './singleCartItem/OrderInformationSection';
+import ProductTitleAndPriceSection from './singleCartItem/productInforSection/ProductTitleAndPriceSection';
 
-export default function SingleItem({image,ProductName,price,description_one,qty,size}) {
-  return (
-    <div>
-        <Grid2 container spacing={2} justifyContent={'cente'}>
-            <Grid2 size={{xs:12,lg:2}}sx={{
-                backgroundImage:`url(${image})`,
-                backgroundSize:'contain',
-                backgroundRepeat:'no-repeat',
-                minHeight:'250px',
-                backgroundPosition:'center'}} >
+
+export default function SingleItem({ image, ProductName, price, description_one, qty, size }) {
+    return (
+        <div>
+            <Grid2 container spacing={2} justifyContent={'cente'}>
+                <Grid2 justifyItems={'center'}  size={{ xs: 4, sm: 3, md: 2 }} sx={{
+                    backgroundImage: `url(${image})`,
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+                    minHeight: '150px',
+                   
+                }} >
+                </Grid2>
+                <Grid2 size={{ xs: 7, md: 9 }} >
+                    <Box sx={{display:{xs:'block',sm:'none'}}}>
+                    <ProductTitleAndPriceSection   ProductName={ProductName} price={price} />
+                    </Box>
+                    <Box sx={{display:{xs:'none',sm:'block'}}}>
+                    <ProductInforSection
+                        ProductName={ProductName} price={price} 
+                        description_one={description_one}
+                        qty={qty}
+                        size={size} />
+                    <Box sx={{ ml: '-20px', mt: '20px' }}>
+                        
+                        <OrderInformationSection qty={qty} price={price} size={size} />
+                    </Box>
+                        </Box>
+                </Grid2>
+                <Grid2 size={1}>
+                    <IconButton color='error'>
+                        <CancelIcon />
+                    </IconButton>
+                </Grid2>
+                <Grid2 size={12} sx={{display:{xs:'block',sm:'none'}}}>
+                    <ProductInforSection
+                       ProductName={ProductName} price={price} 
+                       description_one={description_one}
+                       qty={qty}
+                       size={size}
+                        titleVisibility={{display:{xs:'none',sm:'block'}}}
+                    />
+                    <Box sx={{ ml: '-0px', mt: '20px' }}>
+                        <OrderInformationSection qty={qty} price={price} size={size} />
+                    </Box>
+                </Grid2>
             </Grid2>
-            <Grid2 size={9}>
-                <ProductInforCart 
-                ProductName={ProductName} 
-                price={price} 
-                description_one={description_one}
-                qty={qty}
-                size={size} />
-            </Grid2>
-            <Grid2 size={1}>
-               <IconButton>
-                <CancelIcon/>
-               </IconButton>
-            </Grid2>
-        </Grid2>
-    </div>
-  )
+        </div>
+    )
 }

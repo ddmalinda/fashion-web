@@ -1,27 +1,28 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
-export default function SingleProductSize({ size}) {
+export default function SingleProductSize({ val, isSelected, handleSelected,isError}) {
   return (
     <Box
-   
+      onClick={() => handleSelected(val)}
       sx={{
         border: '1px solid',
-        borderColor:'black',
+        borderColor:isError ? 'red':'black',
         borderRadius: '5px',
         width: '40px',
         height: '40px',
         justifyItems: 'center',
         alignContent: 'center',
-        bgcolor:'black',
+        bgcolor: isSelected ? 'black' : '',
+        cursor: 'pointer'
       }}>
       <Typography sx={{
         fontFamily: 'Ubuntu',
         fontWeight: 500,
         textTransform: 'uppercase',
-        color: '#FFFFFF',
+        color: isSelected ? '#FFFFFF' : isError ? 'red':'black'
       }}>
-        {size}
+        {val}
       </Typography>
 
     </Box>

@@ -4,7 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import SingaleNavigationItem from '../../components/navigationbar/SingaleNavigationItem';
 import BrandTypography from '../../components/commen/BrandTypography';
-import { Box } from '@mui/material';
+import { Box, IconButton } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const navLinks = [
   { title: 'All Items'},
@@ -34,7 +35,9 @@ export default function TopNavigation() {
           
           </Nav>
           <Nav>
-            <SingaleNavigationItem val={{title:'Cart'}} key={'0'}/>
+           <IconButton   color="inherit">
+            <ShoppingCartIcon size="large"/>
+           </IconButton>
           </Nav>
         </Navbar.Collapse>
       </Container>

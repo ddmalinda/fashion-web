@@ -2,6 +2,7 @@ import React from 'react'
 import CommoneWrapLayout from '../components/commen/CommoneWrapLayout'
 import { Grid2 } from '@mui/material'
 import CartItemSection from './cartItem/CartItemSection'
+import CheckOutSystem from './cartItem/CheckOutSystem'
 
 const cardItems=[
     {product:{
@@ -49,7 +50,9 @@ export default function CartLayout() {
     <CommoneWrapLayout>
         <Grid2>
            <CartItemSection data={cardItems}/>
-            checkoutsystem
+        </Grid2>
+        <Grid2>
+          <CheckOutSystem/>
         </Grid2>
     </CommoneWrapLayout>
   )
