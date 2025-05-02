@@ -3,7 +3,8 @@ import './App.css';
 import { CssBaseline } from '@mui/material';
 //import HomeLayout from './layouts/HomeLayout';
 //import ProductDetailListLayer from './layouts/ProductDetailListLayer';
-import CartLayout from './layouts/CartLayout';
+// import CartLayout from './layouts/CartLayout';
+import TemLayout from './layouts/TemLayout';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <CssBaseline />
       {/* <HomeLayout /> */}
       {/* <ProductDetailListLayer/> */}
-      <CartLayout/>
+      {/* <CartLayout/> */}
+      <TemLayout/>
     </div>
   );
 }
