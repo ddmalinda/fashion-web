@@ -10,7 +10,7 @@ export default function ServiceSection(){
     <Grid2 container  justifyContent="center"  sx={{
         bgcolor:'#FBD103',
           height:{md:'150px',xs:'auto'},
-        size:{lg:'2'},
+        size:{lg:'1'},
         display:'flex',
         justifyContent:'center',
         alignItems:'center'

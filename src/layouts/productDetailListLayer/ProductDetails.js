@@ -14,8 +14,8 @@ export default function ProductDetails({product,selectedSize,isError,qty,isLodin
         rating,
        // imageBaseUrl,
        // images,
-        description_one,
-        description_two
+       shortDescription,
+       description
     }=product;
    
     return (
@@ -43,7 +43,7 @@ export default function ProductDetails({product,selectedSize,isError,qty,isLodin
       }}>
         {priceValueFormat(price)}
       </Typography>
-            {[description_one,description_two].map((val,key)=>{
+            {[shortDescription,description].map((val,key)=>{
                 return(
                     <Typography key={key} sx={{
                         fontSize:'16px',

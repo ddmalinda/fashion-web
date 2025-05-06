@@ -3,6 +3,7 @@ import React from 'react'
 import BdTitle from '../../components/commen/titles/BdTitle'
 import NoBdTitle from '../../components/commen/titles/NoBdTitle'
 import ShopNowButton from '../../components/commen/buttons/ShopNowButton'
+import { linkPath } from '../../util/MetaData'
 
 export default function RightSaleSection() {
   return (
@@ -40,7 +41,7 @@ export default function RightSaleSection() {
               *Terms & Conditions apply
             </Typography>
             
-            <ShopNowButton/>
+            <ShopNowButton path={linkPath.allItems} />
         </Box>
     </Box>
   )
