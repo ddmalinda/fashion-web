@@ -1,9 +1,10 @@
 import { Button } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function ShopNowButton() {
+export default function ShopNowButton({path}) {
   return (
-   <Button sx={{  
+   <Button component={Link} to={path} sx={{  
     bgcolor:'black',
     px:'20px',
     py:'4px',

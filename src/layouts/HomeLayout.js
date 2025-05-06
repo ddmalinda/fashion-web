@@ -66,9 +66,6 @@ export default function HomeLayout() {
         <SaleSection />
         <ContactSection data={socailData} />
       </Box>
-     
-
-   
       </CommoneWrapLayout>
 
   )

@@ -1,7 +1,6 @@
 import { Grid2 } from '@mui/material'
 import React from 'react'
 import SingleInformation from './serviceSection/SingleInformation'
-import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import Replay30Icon from '@mui/icons-material/Replay30';

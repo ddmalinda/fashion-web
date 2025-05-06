@@ -7,32 +7,33 @@ import BrandTypography from '../../components/commen/BrandTypography';
 import { IconButton } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
+import { linkPath } from '../../util/MetaData';
 
 const navLinks = [
   { title: 'All Items',
-    path:'/all-items'
+    path:linkPath.allItems,
   }, 
   { title: 'Dress',
-    path:'/temp/dress'
+    path:linkPath.dress,
   },
   { title: 'Seasonal',
-    path:'/temp/seasonal'
+    path:linkPath.seasonal,
   },
   { title: 'Denims',
-    path:'/temp/denims'
+    path:linkPath.denims,
   },
   { title: 'T-Shirts',
-    path:'/temp/tshits'
+    path:linkPath.tshirts,
   },
   { title: 'Tops',
-    path:'/temp/tops'
+    path:linkPath.tops,
   },
 ];
 export default function TopNavigation() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" >
       <Container>
-        <Navbar.Brand href="/"><BrandTypography/></Navbar.Brand>
+        <Navbar.Brand href={linkPath.homePage}><BrandTypography/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"  style={{gap:'30px'}}>
@@ -44,7 +45,7 @@ export default function TopNavigation() {
           
           </Nav>
           <Nav>
-          <Link to="/cart" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link to={linkPath.cart} style={{ textDecoration: 'none', color: 'inherit' }}>
               <IconButton color="inherit">
                 <ShoppingCartIcon size="large" />
               </IconButton>

@@ -3,6 +3,7 @@ import React from 'react'
 import BdTitle from '../commen/titles/BdTitle'
 import NoBdTitle from '../commen/titles/NoBdTitle'
 import ShopNowButton from '../commen/buttons/ShopNowButton'
+import { linkPath } from '../../util/MetaData'
 
 export default function SingleSliderItem({ image }) {
     return (
@@ -33,7 +34,7 @@ export default function SingleSliderItem({ image }) {
                     Live for Influenttial and innovative fashion!
                 </Typography>
                 <Box sx={{pt:'10px'}}>
-                <ShopNowButton />
+                <ShopNowButton path={linkPath.allItems} />
                 </Box>
                 </Box>
                
