@@ -1,11 +1,16 @@
 import { Grid2 } from '@mui/material'
 import CommoneWrapLayout from '../components/commen/CommoneWrapLayout'
 import React, { useEffect, useState } from 'react'
-import ProductList from './homeLayout/allItems/ProductList'
+import ProductList from './allItems/ProductList'
 import axios from 'axios';
+import ProductFilter from './allItems/ProductFilter';
 
 export default function AllItemLayout() {
     const [product,setProduct]=useState([]);
+
+    const updateProducts=(newProduct)=>{
+        setProduct(newProduct)
+    }
     useEffect(()=>{
         axios.get('http://cdn.radikadilanka.com:9000/getProducts/v4').then((response)=>{
             setProduct(response.data);
@@ -18,7 +23,7 @@ export default function AllItemLayout() {
         <CommoneWrapLayout>
             <Grid2 container>
                 <Grid2 size={3}>
-                filter
+                 <ProductFilter data={product} updateProducts={updateProducts}/>
                 </Grid2>
                 <Grid2 size={9}>
                     <ProductList data={product}/>
