@@ -34,7 +34,7 @@ export default function AllItemLayout() {
                     ):loading==='success'?(
                         <ProductList data={productList}/>
                     ):loading==='faliure'?(
-                        <Typography>{error.toString()}</Typography>
+                        <Typography>Something Went Wrong While Loading : {error.toString()}</Typography>
                     ):''
                     }
                 </Grid2>
