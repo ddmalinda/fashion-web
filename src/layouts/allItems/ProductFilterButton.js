@@ -19,7 +19,6 @@ export default function ProductFilterButton({text,hadleSortFilter}) {
         '&:hover':{
           bgcolor:'black',
           color:'white',
-        
         }
       }} >
         {text}

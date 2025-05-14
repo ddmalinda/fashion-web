@@ -2,7 +2,7 @@ import { Grid2, Typography } from '@mui/material'
 import React from 'react'
 import { priceValueFormat } from '../../util/Functions'
 import CheckoutButton from '../../components/commen/buttons/CheckoutButton'
-export default function CheckOutSystem({ totalPrice = '4581452' }) {
+export default function CheckOutSystem({ totalPrice }) {
     return (
         <Grid2 container direction="row"
         sx={{

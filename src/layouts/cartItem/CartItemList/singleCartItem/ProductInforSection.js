@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material'
 import ProductTitleAndPriceSection from './productInforSection/ProductTitleAndPriceSection'
 
 
-export default function ProductInforSection({ProductName,price, description_one,titleVisibility}) {
+export default function ProductInforSection({ProductName,price, shortDescription,titleVisibility}) {
     return (
         <div>
             <Box sx={titleVisibility}>
@@ -19,7 +19,7 @@ export default function ProductInforSection({ProductName,price, description_one,
                 overflow:'hidden',
                 textOverflow:'eclipsis'
             }}>
-                {description_one}
+                {shortDescription}
             </Typography>
            
         </div>

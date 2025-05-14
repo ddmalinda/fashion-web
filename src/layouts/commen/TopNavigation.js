@@ -4,10 +4,20 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import SingaleNavigationItem from '../../components/navigationbar/SingaleNavigationItem';
 import BrandTypography from '../../components/commen/BrandTypography';
-import { IconButton } from '@mui/material';
+import { IconButton, styled } from '@mui/material';
+import Badge, { badgeClasses } from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
 import { linkPath } from '../../util/MetaData';
+
+const CartBadge = styled(Badge)`
+  & .${badgeClasses.badge} {
+    top: -12px;
+    right: -1px;
+    background-color: rgb(255,125,29);
+    color: white;
+  }
+`;
 
 const navLinks = [
   { title: 'All Items',
@@ -29,9 +39,9 @@ const navLinks = [
     path:linkPath.tops,
   },
 ];
-export default function TopNavigation() {
+export default function TopNavigation({ItemCount}) {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" >
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href={linkPath.homePage}><BrandTypography/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -44,10 +54,11 @@ export default function TopNavigation() {
             })}
           
           </Nav>
-          <Nav>
+          <Nav >
           <Link to={linkPath.cart} style={{ textDecoration: 'none', color: 'inherit' }}>
               <IconButton color="inherit">
                 <ShoppingCartIcon size="large" />
+                <CartBadge badgeContent={ItemCount}  overlap="circular" />
               </IconButton>
             </Link>
           </Nav>

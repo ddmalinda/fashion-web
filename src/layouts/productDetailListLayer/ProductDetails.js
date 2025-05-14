@@ -10,12 +10,12 @@ export default function ProductDetails({product,selectedSize,isError,qty,isLodin
         product_name,
         price,
         size,
-        available_quantity,
         rating,
        // imageBaseUrl,
        // images,
        shortDescription,
-       description
+       description,
+       availableQty
     }=product;
    
     return (
@@ -25,7 +25,7 @@ export default function ProductDetails({product,selectedSize,isError,qty,isLodin
             <Typography sx={{fontWeight:'700',fontSize:{xs:'25px',md:'30px'},color:'#1D1D1D', fontFamily:'Ubuntu'}}>{product_name}</Typography>
             </Grid2>
             <Grid2 size={3} sx={{textAlign:'end'}}>         
-                <Chip label= {available_quantity>0 ? "In-Stock": "Out-of-Stock"}
+                <Chip label= {availableQty>0 ? "In-Stock": "Out-of-Stock"}
                     sx={{bgcolor:'transparent',
                         border:'1px solid black',
                         fontFamily:'Ubuntu',

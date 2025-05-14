@@ -1,12 +1,12 @@
 import { Grid2, IconButton, Box } from '@mui/material'
-import React from 'react'
+import React from 'react' 
 import ProductInforSection from './singleCartItem/ProductInforSection'
 import CancelIcon from '@mui/icons-material/Cancel';
 import OrderInformationSection from './singleCartItem/OrderInformationSection';
 import ProductTitleAndPriceSection from './singleCartItem/productInforSection/ProductTitleAndPriceSection';
 
 
-export default function SingleItem({ image, ProductName, price, description_one, qty, size }) {
+export default function SingleItem({ image, ProductName, price, shortDescription, qty, size,hadleRemoveItem }) {
     return (
         <div>
             <Grid2 container spacing={2} justifyContent={'cente'}>
@@ -25,7 +25,7 @@ export default function SingleItem({ image, ProductName, price, description_one,
                     <Box sx={{display:{xs:'none',sm:'block'}}}>
                     <ProductInforSection
                         ProductName={ProductName} price={price} 
-                        description_one={description_one}
+                        shortDescription={shortDescription}
                         qty={qty}
                         size={size} />
                     <Box sx={{ ml: '-20px', mt: '20px' }}>
@@ -35,14 +35,14 @@ export default function SingleItem({ image, ProductName, price, description_one,
                         </Box>
                 </Grid2>
                 <Grid2 size={1}>
-                    <IconButton color='error'>
+                    <IconButton color='error' onClick={hadleRemoveItem}>
                         <CancelIcon />
                     </IconButton>
                 </Grid2>
                 <Grid2 size={12} sx={{display:{xs:'block',sm:'none'}}}>
                     <ProductInforSection
                        ProductName={ProductName} price={price} 
-                       description_one={description_one}
+                       shortDescription={shortDescription}
                        qty={qty}
                        size={size}
                         titleVisibility={{display:{xs:'none',sm:'block'}}}

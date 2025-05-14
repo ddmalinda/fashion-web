@@ -6,10 +6,13 @@ import ProductImageSlider from './productDetailListLayer/ProductImageSlider';
 import { getProductImageUrl } from '../util/Functions';
 import ProductDetails from './productDetailListLayer/ProductDetails';
 import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../Store/actions/cartActions';
 
 export default function ProductDetailListLayer() {
 
   const location =useLocation();
+  const dispatch= useDispatch()
   const {state}=location;
   const {product}= state;
 
@@ -41,6 +44,7 @@ export default function ProductDetailListLayer() {
           }
       }
       
+      dispatch(addToCart(cartItem)) // add to store
 
       setTimeout(() => {
         setIsLoding(false)

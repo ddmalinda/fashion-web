@@ -3,11 +3,11 @@ import React from 'react'
 import SingleItem from './CartItemList/SingleItem';
 import { getProductImageUrl } from '../../util/Functions';
 
-export default function CartItemSection({data}) {  
+export default function CartItemSection({data,hadleRemoveItem}) {  
   return (
    <Box>
    {data && data.map((val,key)=>{
-    const {imageBaseUrl,images,product_name,price,description_one}=val.product;
+    const {imageBaseUrl,images,product_name,price,shortDescription,id}=val.product;
     const {qty,size}=val.order;
         return(
             <Box key={key} sx={{mt:'20px'}}> 
@@ -15,9 +15,10 @@ export default function CartItemSection({data}) {
                 image={getProductImageUrl(imageBaseUrl,images)[0]}
                 ProductName={product_name}
                 price={price}
-                description_one={description_one} 
+                shortDescription={shortDescription} 
                 qty={qty}
-                size={size}/>
+                size={size}
+                hadleRemoveItem={()=>hadleRemoveItem(id)}/>
             <hr/>
             </Box>
         );
