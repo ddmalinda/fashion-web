@@ -1,10 +1,10 @@
 import { Button } from '@mui/material'
 import React from 'react'
 
-export default function ProductFilterButton({text,hadleSortFilter}) {
+export default function ProductFilterButton({text,hadleSizeFilter}) {
   return (
     <Button
-    onClick={()=> hadleSortFilter(text)}
+    onClick={()=> hadleSizeFilter(text)}
     variant="outlined"
     sx={{
         fontFamily:'Ubuntu',

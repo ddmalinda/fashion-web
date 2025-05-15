@@ -1,7 +1,8 @@
 import  * as Action from '../actions/productActions'
 const initialState={
     loading:"notStarted",
-    productList:[],
+    originalProductList:[],
+    displayProductList:[],
     error:null,
 }
 
@@ -17,7 +18,9 @@ const productReducer=(state=initialState,action)=>{
         return{
             ...state,
             loading:'success',
-            productList:[...action.payload]
+            originalProductList:[...action.payload],
+            displayProductList:[...action.payload],
+
 
         }
         case Action.FECTH_PRODUCT_DATA_FALIURE:
@@ -25,6 +28,12 @@ const productReducer=(state=initialState,action)=>{
                 ...state,
                 loading:'faliure',
                 error:action.payload,
+            }
+        case Action.UPADTE_PRODUCT_LIST:
+            return{
+                ...state,
+                 displayProductList:[...action.payload]
+
             }
         default:
            return state

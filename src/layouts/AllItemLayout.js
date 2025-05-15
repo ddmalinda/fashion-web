@@ -1,15 +1,15 @@
 import { Grid2, Typography } from '@mui/material'
 import CommoneWrapLayout from '../components/commen/CommoneWrapLayout'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import ProductList from './allItems/ProductList'
 import ProductFilter from './allItems/ProductFilter';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProductData } from '../Store/actions/productActions';
+import { fetchProductData, updateProductList } from '../Store/actions/productActions';
 
 export default function AllItemLayout() {
-    const [product,setProduct]=useState([]);
 
-    const {loading,productList,error} = useSelector((state)=>state.productReducer);
+
+    const {loading,originalProductList,displayProductList:productList,error} = useSelector((state)=>state.productReducer);
 
     console.log(productList)
     const dispach=useDispatch();
@@ -18,13 +18,14 @@ export default function AllItemLayout() {
         dispach(fetchProductData())
     },[])
     const updateProducts=(newProduct)=>{
-        setProduct(newProduct)
+        dispach(updateProductList(newProduct))
+    
     }
     return (
         <CommoneWrapLayout>
             <Grid2 container>
                 <Grid2 size={3}>
-                 <ProductFilter data={product} updateProducts={updateProducts}/>
+                 <ProductFilter data={originalProductList} displayProductList={productList} updateProducts={updateProducts}/>
                 </Grid2>
                 <Grid2 size={9}>
                     {loading==='notStarted'?(
