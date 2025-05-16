@@ -15,7 +15,9 @@ export default function AllItemLayout() {
     const dispach=useDispatch();
 
     useEffect(()=>{
-        dispach(fetchProductData())
+        if(loading!=='success'){
+            dispach(fetchProductData())
+        }
     },[])
     const updateProducts=(newProduct)=>{
         dispach(updateProductList(newProduct))

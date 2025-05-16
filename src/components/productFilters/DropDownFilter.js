@@ -4,17 +4,27 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { Typography } from '@mui/material';
 
-export default function DropDownFilter({options,hadleFilter}) {
-  const [filter, setFilter] = React.useState('none');
+export default function DropDownFilter({value,options,hadleFilter,title}) {
+
 
   const handleChange = (event) => {
     hadleFilter(event.target.value)
-    setFilter(event.target.value);
   };
 
   return (
     <Box  >
+      <Typography sx={{
+        fontFamily: "Ubuntu",
+        fontSize: "20px",
+        fontWeight:"bold",
+        color: "#323232",
+        textTransform:'uppercase'
+      }}>
+            {title}
+      </Typography>
+
       <FormControl fullWidth size={'small'} sx={{
         width:'250px',
     '& .MuiOutlinedInput-root': {
@@ -33,7 +43,7 @@ export default function DropDownFilter({options,hadleFilter}) {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={filter}
+          value={value}
           onChange={handleChange}
          sx={{
     color: '#FFFFFF', // Select text color
