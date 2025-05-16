@@ -11,7 +11,7 @@ export default function AllItemLayout() {
 
     const {loading,originalProductList,displayProductList:productList,error} = useSelector((state)=>state.productReducer);
 
-    console.log(productList)
+   
     const dispach=useDispatch();
 
     useEffect(()=>{
@@ -21,6 +21,7 @@ export default function AllItemLayout() {
         dispach(updateProductList(newProduct))
     
     }
+     console.log(productList,loading)
     return (
         <CommoneWrapLayout>
             <Grid2 container>

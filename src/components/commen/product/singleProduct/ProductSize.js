@@ -2,7 +2,7 @@ import { Grid } from '@mui/material'; // Corrected import for Grid
 import React, { useEffect, useState } from 'react';
 import SingleProductSize from './singleProductSize/SingleProductSize';
 
-const defultSizeList = ['xs', 's', 'm', 'l', 'lx'];
+const defultSizeList = ['xs', 's', 'm', 'l', 'xl'];
 
 export default function ProductSize({ availableSize }) {
   const [finalSizes, setFinalSizes] = useState([]);
