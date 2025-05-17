@@ -43,7 +43,9 @@ export default function TopNavigation({ItemCount}) {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href={linkPath.homePage}><BrandTypography/></Navbar.Brand>
+        <Link to={linkPath.homePage} style={{ textDecoration: 'none', color: 'inherit' ,marginRight:'10px'}}>
+          <BrandTypography/>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"  style={{gap:'30px'}}>

@@ -16,7 +16,7 @@ const fetchProductData = () => {
         })
 
         axios
-            .get('http://cdn.radikadilanka.com:9000/getProducts/v4')
+            .get('https://backend.radikadilanka.com/getProducts/v4')
             .then((response) => {
                 dispatch({
                     type: FECTH_PRODUCT_DATA_SUCCESS,

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
@@ -83,9 +82,11 @@ export default function CoomigSoonButton({ images }) {
             <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', m: '10px' , justifyContent: "space-around",}}>
                 {images.map((image) => (
                     <ImageButton
+                    size={{xs:12,lg:6}}
                         focusRipple
                         key={image.title}
                         style={{
+                            marginTop:'20px',
                             width: image.width,
                         }}
                     >

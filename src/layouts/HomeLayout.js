@@ -51,8 +51,6 @@ export default function HomeLayout() {
   return (
 
       <CommoneWrapLayout>
-
-    
       <Box sx={{ maxWidth: 'xl', mx: 'auto' }}>
         <CustomerSlider items={items} />
         <Box sx={{mt:'60px'}}>

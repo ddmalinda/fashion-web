@@ -10,10 +10,10 @@ import ViewProductBotton from '../buttons/ViewProductBotton'
 export default function SingleProduct({ product_name, price, size, rating, images }) {
   return (
     <Grid2 sx={{
-      py:'40px',
+      p:'20px 0px 20px 0px',
       transition: '1s',
-      '&:hover': { transform: 'scale(1.1)', boxShadow: '0px 3px 0px 0px #fbd105' },
-      mb: '10px', m: { xs: '10px' }
+      '&:hover': { transform: 'scale(1.05)', boxShadow: '0px 3px 0px 0px #fbd105' },
+      mb: '0px', m: { xs: '10px' }
     }}>
 
       {images && <ProductImage images={images} />}
