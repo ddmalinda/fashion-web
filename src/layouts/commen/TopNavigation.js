@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import SingaleNavigationItem from '../../components/navigationbar/SingaleNavigationItem';
 import BrandTypography from '../../components/commen/BrandTypography';
-import { IconButton, styled } from '@mui/material';
+import { Box, IconButton, styled } from '@mui/material';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
@@ -47,7 +47,7 @@ export default function TopNavigation({ItemCount}) {
           <BrandTypography/>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav" >
           <Nav className="me-auto"  style={{gap:'30px'}}>
             {navLinks.map((val,key)=>{
                 return (             
@@ -56,14 +56,17 @@ export default function TopNavigation({ItemCount}) {
             })}
           
           </Nav>
+            <Box size={{xs:12}} sx={{ display: 'flex',
+        justifyContent: 'center',}}> 
           <Nav >
           <Link to={linkPath.cart} style={{ textDecoration: 'none', color: 'inherit' }}>
-              <IconButton color="inherit">
-                <ShoppingCartIcon size="large" />
+              <IconButton color="inherit" >
+                <ShoppingCartIcon size="large"  />
                 <CartBadge badgeContent={ItemCount}  overlap="circular" />
               </IconButton>
             </Link>
           </Nav>
+            </Box>
         </Navbar.Collapse>
       </Container>
     </Navbar>

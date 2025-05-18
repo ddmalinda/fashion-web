@@ -5,6 +5,8 @@ import ProductList from './allItems/ProductList'
 import ProductFilter from './allItems/ProductFilter';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductData, updateProductList } from '../Store/actions/productActions';
+import { Animated } from 'react-animated-css';
+import FilterAccordion from '../components/productFilters/FilterAccordion';
 
 export default function AllItemLayout() {
 
@@ -19,6 +21,7 @@ export default function AllItemLayout() {
             dispach(fetchProductData())
         }
     },[])
+
     const updateProducts=(newProduct)=>{
         dispach(updateProductList(newProduct))
     
@@ -27,10 +30,17 @@ export default function AllItemLayout() {
     return (
         <CommoneWrapLayout>
             <Grid2 container>
-                <Grid2 size={3}>
+
+                <Grid2 size={3} sx={{display:{xs:'none',md:'block'}}}>
+                <Animated animationIn="bounceInLeft"  isVisible={true}>
                  <ProductFilter data={originalProductList} displayProductList={productList} updateProducts={updateProducts}/>
+                </Animated>
                 </Grid2>
-                <Grid2 size={9}>
+                <Grid2 size={12} sx={{display:{xs:'block',md:'none'}}}>
+                    <FilterAccordion originalProductList={originalProductList} productList={productList} updateProducts={updateProducts} />
+                
+                </Grid2>
+                <Grid2 size={{xs:12,md:9}}>
                     {loading==='notStarted'?(
                         <Typography> Not Started Loading</Typography>
                     ):loading==='loading'?(

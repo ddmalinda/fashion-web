@@ -13,7 +13,7 @@ export default function ProductGrid({products}) {
             const{ product_name, price, size, rating,imageBaseUrl,images}=val;
 
             const result=getProductImageUrl(imageBaseUrl,images);
-            return (<Grid2 size={{xs:6,sm:3,lg: 3 }} key={key} sx={{pt:{xs:'10px',sm:'20px'},p:{lg:'50px'}}}>
+            return (<Grid2 size={{xs:12,sm:6,lg: 3 }} key={key} sx={{pt:{xs:'10px',sm:'20px'},p:{lg:'50px'}}}>
               <Link to={linkPath.details} style={{textDecoration:'none'}} state={{product:val}}>
                 <SingleProduct 
                 product_name={product_name} 

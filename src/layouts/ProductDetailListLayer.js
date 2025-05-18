@@ -22,6 +22,7 @@ export default function ProductDetailListLayer() {
   const [isError, SetIsError] = useState(false);
   const [isLoding, setIsLoding] = useState(false)
   const [qty, setQty] = useState(1)
+  
 
   const handleQtyChange = (newQty) => {
     setQty(newQty)

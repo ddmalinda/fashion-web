@@ -8,6 +8,7 @@ import ServiceSection from './homeLayout/ServiceSection'
 import ViewStoreButoon from '../components/commen/buttons/ViewStoreButoon'
 import CoomigSoonSection from './homeLayout/CoomigSoonSection'
 import CommoneWrapLayout from '../components/commen/CommoneWrapLayout'
+import { Animated } from 'react-animated-css'
 
 
 var items = [
@@ -51,8 +52,11 @@ export default function HomeLayout() {
   return (
 
       <CommoneWrapLayout>
+          
       <Box sx={{ maxWidth: 'xl', mx: 'auto' }}>
+        <Animated animationIn="fadeInDown"  isVisible={true}>
         <CustomerSlider items={items} />
+        </Animated>
         <Box sx={{mt:'60px'}}>
           <NewArrivalSection/>
         </Box>
