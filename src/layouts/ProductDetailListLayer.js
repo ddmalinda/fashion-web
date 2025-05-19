@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CommoneWrapLayout from '../components/commen/CommoneWrapLayout'
 import NewArrivalSection from './homeLayout/NewArrivalSection'
 import { Grid2 } from '@mui/material'
@@ -56,9 +56,14 @@ export default function ProductDetailListLayer() {
       SetIsError(true)
     }
   }
+
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [product]);
+
   return (
     <CommoneWrapLayout>
-      <Grid2 container spacing={4} sx={{ mb: '40px' }} >
+      <Grid2 container spacing={4} sx={{ mb: '40px' }} justifyContent={'flex-start'} >
         <Grid2 size={{ xs: 12, sm: 6, lg: 4 }} sx={{ justifyContent: 'center' }}>
           <ProductImageSlider images={getProductImageUrl(product.imageBaseUrl, product.images)} />
         </Grid2 >

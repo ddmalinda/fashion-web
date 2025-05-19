@@ -9,14 +9,11 @@ import { Animated } from 'react-animated-css';
 import FilterAccordion from '../components/productFilters/FilterAccordion';
 
 export default function AllItemLayout() {
-
-
     const {loading,originalProductList,displayProductList:productList,error} = useSelector((state)=>state.productReducer);
-
-   
     const dispach=useDispatch();
 
     useEffect(()=>{
+         window.scrollTo(0, 0);
         if(loading!=='success'){
             dispach(fetchProductData())
         }
@@ -31,7 +28,7 @@ export default function AllItemLayout() {
         <CommoneWrapLayout>
             <Grid2 container>
 
-                <Grid2 size={3} sx={{display:{xs:'none',md:'block'}}}>
+                <Grid2 size={3} sx={{display:{xs:'none',md:'block'} }}>
                 <Animated animationIn="bounceInLeft"  isVisible={true}>
                  <ProductFilter data={originalProductList} displayProductList={productList} updateProducts={updateProducts}/>
                 </Animated>

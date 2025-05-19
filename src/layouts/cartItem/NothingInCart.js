@@ -12,7 +12,7 @@ export default function NothingInCart() {
                     ustifyContent="center" alignItems="center"
                     sx={{
                         display:'flex',
-                   width:{xs:'100%',md:'60'},
+                   width: '60%',
                         height: '100%',
                         objectFit: 'cover',
                         objectPosition: 'center',

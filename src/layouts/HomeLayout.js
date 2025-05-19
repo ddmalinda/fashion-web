@@ -1,5 +1,5 @@
 import { Box } from '@mui/system'
-import React from 'react'
+import React, { useEffect } from 'react'
 import CustomerSlider from './homeLayout/CustomerSlider'
 import ContactSection from './homeLayout/ContactSection'
 import SaleSection from './homeLayout/SaleSection'
@@ -49,6 +49,9 @@ var socailData = [
 
 
 export default function HomeLayout() {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
 
       <CommoneWrapLayout>
