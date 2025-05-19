@@ -3,7 +3,7 @@ import DropDownFilter from '../../components/productFilters/DropDownFilter';
 import MultiSelecterFilter from '../../components/productFilters/MultiSelecterFilter';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setSizeFilter, setSortFilter, setTypeFilter } from '../../Store/actions/productActions';
+import { setSizeFilter, setSortFilter, setTypeFilter, UpdateCleanFilter } from '../../Store/actions/productActions';
 import useProductFilters from '../../util/customHooks/useProductFilter';
 
 const priceFilterOptions = [
@@ -34,6 +34,9 @@ export default function ProductFilter({ data, displayProductList, updateProducts
     const hadleSortFilter = (sortOrder) => {
         dispach(setSortFilter(sortOrder))
     }
+    const hadleCleanFilter=()=>{
+        dispach(UpdateCleanFilter())
+    }
     useEffect(()=>{
         updateProducts(filteredProducts);
     },[filteredProducts])
@@ -43,10 +46,9 @@ export default function ProductFilter({ data, displayProductList, updateProducts
             paddingLeft: '20px',
             position: 'sticky',
             top: 150,
-            maxHeight: '80vh',        // Set the max height for the sidebar
+            maxHeight: '80vh',        
             overflowY: 'auto',        // Enable vertical scrolling
             background: '#FFFFFF',       // Optional: background for better UX
-                     // Optional: ensure it stays above content
               '&::-webkit-scrollbar': {
             display: 'none',
         },
@@ -54,6 +56,9 @@ export default function ProductFilter({ data, displayProductList, updateProducts
         '-ms-overflow-style': 'none',  // IE and Edge
         'scrollbar-width': 'none',     // Firefox
         }} >
+            <Grid2>
+                
+            </Grid2>
             <Grid2  >
                 <DropDownFilter title={'Arrange by Price'} value={sortFilter} options={priceFilterOptions} hadleFilter={hadleSortFilter} />
             </Grid2>

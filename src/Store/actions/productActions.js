@@ -7,6 +7,7 @@ export const UPADTE_PRODUCT_LIST = 'UPADTE_PRODUCT_LIST';
 export const SET_SITE_FILTER = 'SET_SITE_FILTER';
 export const SET_TYPE_FILTER = 'SET_TYPE_FILTER';
 export const SET_SORT_FILTER='SET_SORT_FILTER';
+export const SET_CLEAN_FILTER='SET_CLEAN_FILTER';
 
 const fetchProductData = () => {
     return (dispatch) => {
@@ -58,4 +59,9 @@ const setSortFilter=(value)=>{
         payload:value,
     }
 }
-export { fetchProductData, updateProductList, setSizeFilter, setTypeFilter,setSortFilter };
+const UpdateCleanFilter=()=>{
+    return{
+        type:SET_CLEAN_FILTER,
+    }
+}
+export { fetchProductData, updateProductList, setSizeFilter, setTypeFilter,setSortFilter,UpdateCleanFilter };

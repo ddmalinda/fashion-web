@@ -73,6 +73,14 @@ const productReducer = (state = initialState, action) => {
                 ...state,
                 sortFilter:action.payload,
             }
+        case Action.SET_CLEAN_FILTER:
+            return{
+                ...state,
+                
+    sizeFilter: [...initialState],
+    typeFilter: [...initialState],
+    sortFilter:'none'
+            }
 
         default:
             return state
