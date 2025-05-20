@@ -10,10 +10,7 @@ export default function SingleSliderItem({ image }) {
         <Box
             sx={{
                 backgroundImage: `url(${image})`,
-                height: {xs:'300px',sm:'400px',md:'500px',lg:'700px'},
                 backgroundSize: 'cover',
-                width: {xs:'600px',sm:'800px',md:'1000px',lg:'1600px'},
-                margin: 'auto',
             }} >
                 <Box  sx={{
                     p:'60px',

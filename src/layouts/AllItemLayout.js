@@ -1,6 +1,6 @@
 import { Grid2, Typography } from '@mui/material'
 import CommoneWrapLayout from '../components/commen/CommoneWrapLayout'
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import ProductList from './allItems/ProductList'
 import ProductFilter from './allItems/ProductFilter';
 import { useDispatch, useSelector } from 'react-redux';
@@ -17,12 +17,13 @@ export default function AllItemLayout() {
         if(loading!=='success'){
             dispach(fetchProductData())
         }
+        //Empty arry means it will onlty run once when the component mounts
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
-    const updateProducts=(newProduct)=>{
+    const updateProducts=useCallback((newProduct)=>{
         dispach(updateProductList(newProduct))
-    
-    }
+    },[dispach])
     return (
         <CommoneWrapLayout>
             <Grid2 container>

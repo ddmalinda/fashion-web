@@ -13,20 +13,30 @@ import { Animated } from 'react-animated-css'
 
 var items = [
   {
-    image: 'https://images.pexels.com/photos/3761157/pexels-photo-3761157.jpeg'
+    image: '/assets/slidImages/1.svg'
   },
   {
-    image: 'https://images.pexels.com/photos/833052/pexels-photo-833052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: '/assets/slidImages/2.svg'
   },
   {
-    image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg'
+    image: '/assets/slidImages/3.svg'
   },
   {
-    image: 'https://images.pexels.com/photos/845434/pexels-photo-845434.jpeg'
+    image: '/assets/slidImages/4.svg'
   },
   {
-    image: 'https://images.pexels.com/photos/994234/pexels-photo-994234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-  }
+    image: '/assets/slidImages/5.svg'
+  },
+  {
+    image: '/assets/slidImages/6.svg'
+  },
+  {
+    image: '/assets/slidImages/7.svg'
+  },
+  {
+    image: '/assets/slidImages/8.svg'
+  },
+  
 ]
 
 var socailData = [

@@ -43,7 +43,7 @@ export default function ProductFilter({ data, updateProducts }) {
     }
     useEffect(() => {
         updateProducts(filteredProducts);
-    }, [filteredProducts])
+    }, [filteredProducts,updateProducts])
     return (
         <Grid2 sx={{
             bgcolor: '#F9FAFB', px: '20px', py: '20px',
@@ -55,9 +55,9 @@ export default function ProductFilter({ data, updateProducts }) {
         }} >
             <CurrentFilter
                 filter={[
+                    { name: 'sort', isActive: (sortFilter !== 'none') ? true : false },
                     { name: 'size', isActive: getSelectedOption(sizeFilter).length },
                     { name: 'occation', isActive: getSelectedOption(typeFilter).length },
-                    // { name: 'sort', isActive: (sortFilter !== 'none') ? true : false },
                 ]}
                 title={'Current Filters'}
                 hadleCleanFilter={hadleCleanFilter}

@@ -5,7 +5,7 @@ export default function ProductImage({ images }) {
 
   const [imagSrc, setImageSrc] = useState(images[0]);
 
-  useEffect(() => { setImageSrc(images[0]); }, [images[0]]);
+  useEffect(() => { setImageSrc(images[0]); }, [images]);
   return (
     <Box component={'img'}
       src={imagSrc}
