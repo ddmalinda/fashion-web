@@ -14,7 +14,7 @@ export default function CurrentFilter({title,hadleCleanFilter,filter}){
         });
         setAcvitveFilter(temp) 
       },[filter])
-      console.log(activeFilter)
+      
     return(
         <div>
             <CleanFilter title={title} hadleCleanFilter={hadleCleanFilter}/>

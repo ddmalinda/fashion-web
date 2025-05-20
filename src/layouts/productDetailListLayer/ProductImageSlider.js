@@ -21,8 +21,8 @@ export default function ProductImageSlider({ images }) {
                     ref={swiperRef}
                     spaceBetween={50}
                     slidesPerView={1}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log('slide change')}
+                    // onSwiper={(swiper) => console.log(swiper)}
                     modules={[Pagination]}
                     pagination={{ clickable: true }}
                     

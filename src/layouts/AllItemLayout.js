@@ -23,7 +23,6 @@ export default function AllItemLayout() {
         dispach(updateProductList(newProduct))
     
     }
-     console.log(productList,loading)
     return (
         <CommoneWrapLayout>
             <Grid2 container>
