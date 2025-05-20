@@ -77,8 +77,8 @@ const productReducer = (state = initialState, action) => {
             return{
                 ...state,
                 
-    sizeFilter: [...initialState],
-    typeFilter: [...initialState],
+    sizeFilter: [...initialState.sizeFilter],
+    typeFilter: [...initialState.typeFilter],
     sortFilter:'none'
             }
 

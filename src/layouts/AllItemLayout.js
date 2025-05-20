@@ -30,7 +30,7 @@ export default function AllItemLayout() {
 
                 <Grid2 size={3} sx={{display:{xs:'none',md:'block'} }}>
                 <Animated animationIn="bounceInLeft"  isVisible={true}>
-                 <ProductFilter data={originalProductList} displayProductList={productList} updateProducts={updateProducts}/>
+                 <ProductFilter data={originalProductList} updateProducts={updateProducts}/>
                 </Animated>
                 </Grid2>
                 <Grid2 size={12} sx={{display:{xs:'block',md:'none'}}}>

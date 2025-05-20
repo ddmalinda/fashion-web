@@ -26,7 +26,7 @@ export default function DropDownFilter({value,options,hadleFilter,title}) {
       </Typography>
 
       <FormControl fullWidth size={'small'} sx={{
-        width:'250px',
+        width:'100%',
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
         borderColor: '#FF7D1D', // Default border color

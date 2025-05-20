@@ -20,4 +20,14 @@ const getProductImageUrl =(imageBaseUrl,imageArray)=>{
     
 };
 
-export {getProductImageUrl,priceValueFormat};
+const getSelectedOption=(array)=>{
+    const temp=[]
+    array.forEach(element => {
+        if(element.value){
+            temp.push(array.label)
+        }
+    });
+    return temp
+}
+
+export {getProductImageUrl,priceValueFormat,getSelectedOption};
