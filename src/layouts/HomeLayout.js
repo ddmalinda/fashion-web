@@ -42,17 +42,17 @@ var items = [
 var socailData = [
   {
     title: "Facebook",
-    image: "https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_jpg-512.png",
+    image: "https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-512.png",
     link: "https://web.facebook.com/profile.php?id=100072050881155"
   },
   {
     title: "Instagram",
-    image: "https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_jpg-512.png",
+    image: "https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-512.png",
     link: "https://www.instagram.com/_dasith_dm_/?igsh=MTFmb3Boczd6aHp2bQ%3D%3D#"
   },
   {
     title: "WhatsApp",
-    image: "https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Whatsapp_jpg-512.png",
+    image: "https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Whatsapp_svg-512.png",
     link: "https://wa.me/message/TKCQY25ELRBSK1"
   }
 ]
